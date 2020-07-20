@@ -116,6 +116,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     // `gatsby-plugin-eslint`,
+    `gatsby-plugin-disqus`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
