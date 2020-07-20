@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -109,13 +109,13 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: [`Roboto`, `Nanum Myeongjo`, `Noto Sans KR`]
-        }
-      }
+          families: [`Roboto`, `Nanum Myeongjo`, `Noto Sans KR`],
+        },
+      },
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-eslint`,
+    // `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -133,4 +133,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
