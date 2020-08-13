@@ -5,7 +5,7 @@ export const StyledHeadline = styled.section`
   margin-bottom: 60px;
 
   h2 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 900;
     font-size: 29px;
   }
@@ -91,7 +91,6 @@ export const StyledContents = styled.section`
 `
 
 export const StyledCategory = styled.div`
-  margin-bottom: 10px;
   color: #333;
   font-size: 16px;
   font-weight: 600;
