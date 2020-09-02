@@ -98,8 +98,9 @@ export const StyledContents = styled.section`
 `
 
 export const StyledCategory = styled.div`
+  margin-bottom: 10px;
   color: #333;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 `
 
