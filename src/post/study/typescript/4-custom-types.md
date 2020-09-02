@@ -2,6 +2,7 @@
 title: "4. Custom type 만들기 (Type Aliases)"
 date: "2020-08-13"
 category: "study"
+sub_category: "typescript"
 tags: ["typescript"]
 ---
 
