@@ -31,6 +31,8 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            sub_category
+            category
             date(formatString: "DD MMMM, YYYY")
           }
           fields {
