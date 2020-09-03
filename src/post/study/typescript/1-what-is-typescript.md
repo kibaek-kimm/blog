@@ -2,6 +2,7 @@
 title: "1. 타입스크립트란?"
 date: "2020-03-02"
 category: "study"
+sub_category: "typescript"
 tags: ["typescript"]
 ---
 

@@ -15,7 +15,10 @@ const PostList = ({ data, heading }) => (
       {data.map(({ node }) => (
         <StyledPostItem key={node.id} id={node.id}>
           {node.frontmatter.category && (
-            <StyledCategory>{node.frontmatter.category}</StyledCategory>
+            <StyledCategory>
+              {node.frontmatter.category}
+              {node.frontmatter.sub_category && <> &gt; {node.frontmatter.sub_category}</>}
+            </StyledCategory>
           )}
           <h3>{node.frontmatter.title}</h3>
           <div>{node.excerpt}</div>

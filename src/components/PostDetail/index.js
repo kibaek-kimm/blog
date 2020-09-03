@@ -20,7 +20,10 @@ const PostDetail = ({ postData, slug }) => {
     <div>
       <StyledHeadline>
         {postData.frontmatter.category && (
-          <StyledCategory>{postData.frontmatter.category}</StyledCategory>
+          <StyledCategory>
+            {postData.frontmatter.category}
+            {postData.frontmatter.sub_category && <> &gt; {postData.frontmatter.sub_category}</>}
+          </StyledCategory>
         )}
         <h2>{postData.frontmatter.title}</h2>
         <StyledDate>{postData.frontmatter.date}</StyledDate>

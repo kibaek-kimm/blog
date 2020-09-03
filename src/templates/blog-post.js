@@ -32,6 +32,7 @@ export const query = graphql`
         date
         tags
         category
+        sub_category
       }
       fields {
         slug

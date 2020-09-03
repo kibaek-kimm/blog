@@ -33,6 +33,13 @@ export const StyledContents = styled.section`
     margin: 60px 0;
   }
 
+  p > code[class*="language-"] ,
+  div > code[class*="language-"] ,
+  h2 > code[class*="language-"] {
+    background: #eee;
+    color: #000;
+  }
+
   .gatsby-highlight-code-line {
     background-color: #feb;
     display: block;
@@ -91,8 +98,9 @@ export const StyledContents = styled.section`
 `
 
 export const StyledCategory = styled.div`
+  margin-bottom: 10px;
   color: #333;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 `
 

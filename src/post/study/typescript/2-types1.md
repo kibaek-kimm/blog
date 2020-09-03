@@ -2,6 +2,7 @@
 title: "2. 타입스크립트의 타입들1 (number, string, boolean, any)"
 date: "2020-03-11"
 category: "study"
+sub_category: "typescript"
 tags: ["typescript"]
 ---
 

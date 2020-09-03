@@ -38,7 +38,7 @@ export const StyledPostItem = styled.li`
 
   div {
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
   }
 `
