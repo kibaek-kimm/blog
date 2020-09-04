@@ -1,0 +1,23 @@
+---
+title: "2. [rn] Hello world"
+date: "2020-08-19"
+category: "study"
+tags: ["react native"]
+---
+
+제가 공부하고있는 강좌에서는 expo를 사용하고 있어서 expo기반으로 진행될 예정입니다.
+
+## 설치
+1. `expo-cli` 라이브러리를 global로 설치해야 합니다.
+```bash
+npm install expo-cli --global 
+#또는
+yarn global add expo-cli
+```
+
+2. 설치가 정상적으로 되었다면 아래 명령어로 작업환경을 초기화합니다.
+```bash
+expo init project_name
+```
+
+3. 
