@@ -16,6 +16,12 @@ export const StyledContents = styled.section`
 
   h2 {
     margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  h2 + ul,
+  h2 + p {
+    margin-bottom: 50px;
   }
 
   p {
@@ -36,8 +42,33 @@ export const StyledContents = styled.section`
   p > code[class*="language-"] ,
   div > code[class*="language-"] ,
   h2 > code[class*="language-"] {
-    background: #eee;
+    background: #ddd;
     color: #000;
+  li {
+    position: relative;
+  }
+
+  ul {
+    li {
+      padding-left: 16px;
+      margin-bottom: 4px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #000;
+      }
+    }
   }
 
   .gatsby-highlight-code-line {
