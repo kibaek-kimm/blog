@@ -75,7 +75,7 @@ module.exports = {
 ## 3. babel 설치
  react와 es6 문법으로 되어있는 src/index.js파일을 컴파일하기 위해 babel을 설치합니다.
  ```bash
- yarn add --dev babel-loader @babel/core @babel/babel-preset-env @babel/babel-preset-react
+ yarn add --dev babel-loader @babel/core @babel/preset-env @babel/preset-react
 ```
 
 babel이 실행될때 참조될 환경설정 파일인 **.babelrc**파일을 root 위치에 생성합니다.
@@ -108,15 +108,17 @@ webpack이 번들링을 하는 중간에 babel-loader를 이용해 컴파일 할
 ```javascript
 module.exports = {
   // 기존 설정들..
-  rules: [
-    { 
-      test: /\.js?x/, 
-      exclude: /node_modules/,
-      use: { 
-        loader: "babel-loader"
+  module: {
+    rules: [
+      { 
+        test: /\.js?x/, 
+        exclude: /node_modules/,
+        use: { 
+          loader: "babel-loader"
+        }
       }
-    }
-  ]
+    ]
+  }
 }
 
 ```
