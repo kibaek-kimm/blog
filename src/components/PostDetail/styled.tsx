@@ -13,15 +13,20 @@ export const StyledHeadline = styled.section`
 
 export const StyledContents = styled.section`
   margin-bottom: 100px;
+  font-family: "Noto Sans KR";
 
   h2 {
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 10px;
+
+    @media (max-width: 767px) {
+      margin-top: 40px;
+    }
   }
 
   h2 + ul,
   h2 + p {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
   }
 
   p {
