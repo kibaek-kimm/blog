@@ -6,7 +6,7 @@ export const StyledLayout = styled.section`
 `
 
 export const StyledInnerLayout = styled.section`
-  width: 680px;
+  width: 800px;
   position: relative;
   margin: 0 auto;
   display: flex;
