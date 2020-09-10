@@ -1,5 +1,5 @@
 ---
-title: "2. 타입스크립트의 타입들1 (number, string, boolean, any)"
+title: "2. 타입스크립트의 타입들1 (number, string, boolean, any, unknown)"
 date: "2020-03-11"
 category: "study"
 sub_category: "typescript"
@@ -87,6 +87,22 @@ any와 유사하게 모든 타입이 할당될 수 있습니다만, 타입스크
 
 값에 할당되는 경우는 any처럼 동적으로 할당할 수 있지만, 이 값이 어딘가 할당을 하게 된다면 에러가 발생합니다.
 
+그렇다면 어떻게 할당할까? unknown타입으로 정의된 변수의 타입을 체크하는 로직이 필요합니다.
+
+```typescript
+let unknownValue: unknown;
+let fixedValue: string;
+
+unknownValue = "Hello"; // OK
+
+fixedValue = unknownValue; // error
+
+if (unknownValue === "string") {
+  fixedValue = unknownValue; // OK
+}
+```
+
+unknown타입은 any타입처럼 값을 유연하게 할당할 수 있지만, 실제로 사용할떄는 말 그대로 **아직 정해지지 않은타입**이기 때문에 코드베이스에서 unknown타입에 대한 타입체크 후애 사용할 수 있다고 볼 수 있습니다.
 
 ---
 
