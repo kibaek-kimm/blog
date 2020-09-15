@@ -102,7 +102,7 @@ babel이 실행될때 참조될 환경설정 파일인 **.babelrc**파일을 roo
 ## 4. webpack에 babel연동
 webpack이 번들링을 하는 중간에 babel-loader를 이용해 컴파일 할수 있도록 webpack 환경설정을 추가합니다.
 
-참고: <a href="https://webpack.js.org/configuration/module/#modulerules" target="_blank">https://webpack.js.org/configuration/module/#modulerules</a>
+참고: https://webpack.js.org/configuration/module/#modulerules
 
 *webpack.config.js*
 ```javascript
@@ -126,7 +126,7 @@ module.exports = {
 ## 5. webpack-dev-server + html-webpack-plugin
 webpack-dev-server 사용을 위해 webpack 환경설정을 추가하고, html-webpack-plugin 연동도 같이 합니다.
 
-참고: <a href="https://webpack.js.org/configuration/dev-server/" target="_blank">https://webpack.js.org/configuration/dev-server/</a>
+참고: https://webpack.js.org/configuration/dev-server/
 
 ```bash
 yarn add --dev html-webpack-plugin
