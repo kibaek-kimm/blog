@@ -1,5 +1,5 @@
 ---
-title: "6. 타입스크립트 환경 구축하기1"
+title: "6. 타입스크립트 환경 구축하기 1"
 date: "2020-09-08"
 category: "study"
 sub_category: "typescript"
