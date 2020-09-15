@@ -24,9 +24,12 @@ export const StyledContents = styled.section`
     }
   }
 
-  h2 + ul,
-  h2 + p {
-    // margin-bottom: 50px;
+  h3 {
+    margin-top: 30px;
+  }
+
+  h3 + p {
+    margin-top: 10px;
   }
 
   p {
@@ -46,6 +49,7 @@ export const StyledContents = styled.section`
 
   p > code[class*="language-"] ,
   div > code[class*="language-"] ,
+  li > code[class*="language-"] ,
   h2 > code[class*="language-"] {
     background: #ddd;
     color: #000;
