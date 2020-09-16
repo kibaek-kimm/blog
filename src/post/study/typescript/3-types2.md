@@ -1,5 +1,5 @@
 ---
-title: "3. 타입스크립트의 타입들2 (object, Array, Tuple, Enum)"
+title: "타입스크립트의 타입들 2 (object, Array, Tuple, Enum)"
 date: "2020-03-12"
 category: "study"
 sub_category: "typescript"

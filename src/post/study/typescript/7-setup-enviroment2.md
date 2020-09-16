@@ -1,5 +1,5 @@
 ---
-title: "7. 타입스크립트 tsconfig"
+title: "타입스크립트 tsconfig"
 date: "2020-09-15"
 category: "study"
 sub_category: "typescript"

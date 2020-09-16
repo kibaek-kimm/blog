@@ -1,5 +1,5 @@
 ---
-title: "5. Function types"
+title: "Function types"
 date: "2020-09-04"
 category: "study"
 sub_category: "typescript"
