@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogPostTemplate = path.resolve("src/templates/blog-post.js")
   const tagTemplate = path.resolve("src/templates/tags.js")
   const categoryTemplate = path.resolve("src/templates/category.js")
+  const subCategoryTemplate = path.resolve("src/templates/sub-category.js")
   const result = await graphql(`
     query {
       postsRemark: allMarkdownRemark(
@@ -21,6 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             frontmatter {
               tags
               category
+              sub_category
             }
           }
         }
@@ -34,6 +36,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       categoryGroup: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___category) {
+          fieldValue
+        }
+      }
+
+      subCategoryGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___sub_category) {
           fieldValue
         }
       }
@@ -74,6 +82,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // 카테고리 상세페이지
   const categories = result.data.categoryGroup.group
+  const subCategories = result.data.subCategoryGroup.group
   categories.forEach(category => {
     createPage({
       path: `/category/${_.kebabCase(category.fieldValue)}/`,
@@ -81,6 +90,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: {
         category: category.fieldValue,
       },
+    })
+
+    subCategories.forEach(subCategory => {
+      createPage({
+        path: `/category/${_.kebabCase(category.fieldValue)}/${_.kebabCase(subCategory.fieldValue)}`,
+        component: subCategoryTemplate,
+        context: {
+          sub_category: subCategory.fieldValue,
+          category: category.fieldValue,
+        },
+      })
     })
   })
 }

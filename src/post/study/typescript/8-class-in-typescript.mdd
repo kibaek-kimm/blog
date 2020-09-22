@@ -1,0 +1,10 @@
+---
+title: "Class in typescript"
+date: "2020-09-16"
+category: "study"
+sub_category: "typescript"
+tags: ["typescript"]
+---
+
+## class in javascript
+ES6부터 javascript 기본 스펙으로 추가 된 class는 이전 버전에서 prototype이라는 프로퍼티를 이용해 class처럼 사용

@@ -3,22 +3,17 @@ import { graphql } from "gatsby"
 import { StyledHeading } from "./styled"
 import Layout from "../components/layout"
 import PostList from "../components/PostList"
-import SubCategories from '../components/SubCategories'
 
 const Category = ({ pageContext, data }) => {
-  const { category } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
-  console.log(edges);
-  const subCateogories = edges.node.frontmatter.sub_category;
-
   console.log('pageContext: ', pageContext);
+  const { category, sub_category } = pageContext
+  const { edges, totalCount } = data.allMarkdownRemark
 
   return (
     <Layout>
       <StyledHeading>
-        {totalCount} 개의 &ldquo;{category}&ldquo; 포스트가 있습니다.
+        {totalCount} 개의 &ldquo;{category} &gt; {sub_category}&ldquo; 포스트가 있습니다.
       </StyledHeading>
-      {subCateogories && <SubCategories subCateogories={subCateogories}/>}
       <PostList data={edges} />
     </Layout>
   )
@@ -26,7 +21,7 @@ const Category = ({ pageContext, data }) => {
 
 export default Category
 export const pageQuery = graphql`
-  query($category: String) {
+  query($category: String, $sub_category: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -34,6 +29,9 @@ export const pageQuery = graphql`
         frontmatter: { 
           category: { 
             in: [$category] 
+          },
+          sub_category: { 
+            in: [$sub_category] 
           } 
         } 
       }
