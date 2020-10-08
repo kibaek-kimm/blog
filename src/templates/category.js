@@ -9,7 +9,7 @@ const Category = ({ pageContext, data }) => {
   const { category } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   console.log(edges);
-  const subCateogories = edges.node.frontmatter.sub_category;
+  const subCateogories = edges.node?.frontmatter?.sub_category;
 
   console.log('pageContext: ', pageContext);
 
