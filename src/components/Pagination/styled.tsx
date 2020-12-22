@@ -34,10 +34,9 @@ const stylesCommonArrow = css`
 
 export const StyledWrapper = styled.div`
   width: 100%;
-  padding-top: 30px;
   text-align: center;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 `;
 
 export const StyledItem = styled(Link)`
