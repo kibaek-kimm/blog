@@ -4,12 +4,6 @@ import { StyledNavigation, StyledNavigationItem } from "./styled"
 
 const navigationData = [
   {
-    text: "Posts",
-    attrs: {
-      to: "/posts/",
-    },
-  },
-  {
     text: "Category",
     attrs: {
       to: "/category/",
