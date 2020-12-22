@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
   const posts = result.data.postsRemark.edges
-  const postsPerPage = 6;
+  const postsPerPage = 10;
   const numPages = Math.ceil(posts.length / postsPerPage)
   // Create post detail pages
   posts.forEach(({ node }, index) => {
