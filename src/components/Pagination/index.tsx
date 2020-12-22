@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import {
   StyledWrapper,
   StyledItem,
@@ -6,16 +6,33 @@ import {
   StyledItemNext
 } from "./styled";
 
-const Pagination = (props) => {
+const Pagination = ({ baseUrl, currentPage, numPages }) => {
+  const viewPageCountBothSide = 2;
+  const getPageButton = useCallback(() => {
+    const renderArr = [];
+    let startNum = currentPage - viewPageCountBothSide;
+    let endNum = currentPage + viewPageCountBothSide;
+
+    if (startNum <= 0) {
+      startNum = 1;
+    }
+
+    if (endNum > numPages) {
+      endNum = numPages;
+    }
+
+    for (let i = startNum; i <= endNum; i++) {
+      renderArr.push(<StyledItem active={i === currentPage} to={`${baseUrl}${i}`}>{i}</StyledItem>)
+    }
+
+    return renderArr
+  }, [currentPage]);
+
   return (
     <StyledWrapper>
-      <StyledItemPrev href="javascript:void(0)" />
-      <StyledItem href="javascript:void(0)" active={true}>
-        1
-      </StyledItem>
-      <StyledItem href="javascript:void(0)">2</StyledItem>
-      <StyledItem href="javascript:void(0)">3</StyledItem>
-      <StyledItemNext href="javascript:void(0)" />
+      <StyledItemPrev disabled={currentPage === 1} to={`${baseUrl}${currentPage - 1}`}/>
+      {getPageButton()}
+      <StyledItemNext disabled={currentPage === numPages} to={`${baseUrl}${currentPage + 1}`}/>
     </StyledWrapper>
   )
 }

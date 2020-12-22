@@ -1,9 +1,12 @@
 import styled, {css} from "styled-components";
+import Link from "gatsby-link"
+
 const stylesCommonArrow = css`
   position: relative;
   width: 35px;
   height: 35px;
   opacity: 0.6;
+  cursor: pointer;
 
   &:hover {
     opacity: 1;
@@ -18,6 +21,15 @@ const stylesCommonArrow = css`
     width: 10px;
     height: 10px;
   }
+
+  ${props => props.disabled && css`
+    opacity: 0.2;
+    pointer-events: none;
+
+    &:hover {
+      opacity: 0.2;
+    }
+  `}
 `;
 
 export const StyledWrapper = styled.div`
@@ -25,10 +37,10 @@ export const StyledWrapper = styled.div`
   padding-top: 30px;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 `;
 
-export const StyledItem = styled.a`
+export const StyledItem = styled(Link)`
   width: 35px;
   height: 35px;
   display: inline-block;
@@ -36,6 +48,7 @@ export const StyledItem = styled.a`
   line-height: 35px;
   color: #333;
   opacity: 0.6;
+  cursor: pointer;
 
   &:hover {
     opacity: 1;
@@ -49,7 +62,7 @@ export const StyledItem = styled.a`
   `}
 `;
 
-export const StyledItemPrev = styled.a`
+export const StyledItemPrev = styled(Link)`
   ${stylesCommonArrow}
 
   &::after {
@@ -59,7 +72,7 @@ export const StyledItemPrev = styled.a`
   }
 `;
 
-export const StyledItemNext = styled.a`
+export const StyledItemNext = styled(Link)`
   ${stylesCommonArrow}
 
   &::after {
