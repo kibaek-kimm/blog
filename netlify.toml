@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/"
+  to = "/posts/1"
+  status = 301
+  force = true
+  query = {path = ":path"}
