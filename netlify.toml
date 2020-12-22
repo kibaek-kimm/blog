@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/"
   to = "/posts/1"
-  status = 301
+  status = 200
   force = true
   query = {path = ":path"}
